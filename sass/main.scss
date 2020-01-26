@@ -1,0 +1,255 @@
+
+//Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap);
+
+
+//variaveis
+$white: rgba(255,255,255,1);
+$light: rgba(0,0,0,.1);
+$light2:#ededed;
+$black: #373449;
+$color1: #ff7a6c;
+$color2: deepskyblue;
+$color3: #2c4895;
+$color4: #e0bc4d;
+
+
+
+*{
+    margin: 0;
+    padding: 0 ;
+}
+
+body{
+    background-color:rgba(0,0,0,.05);
+}
+
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clip{
+    background-color: $color1;
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    clip-path: polygon(52% 0%, 100% 0%, 100% 100%, 0% 100% );
+    transition: all .8s ease;
+}
+
+
+
+
+
+    //text
+
+    .title, .title2, .txl, .txp {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+
+
+    .title{
+        font-size: 3.5em;
+        color: $color1;
+        font-weight: bold;
+    }
+
+    .title2{
+        
+        font-size: 2.3em;
+        color: $light2;
+        position: absolute;
+        right: -80px;
+        top: 47%;
+        margin: auto 10px;
+        transform: rotate(90deg);
+        opacity: .5;
+    }
+
+    .txl{
+        font-size: 1.2em;
+        color: $black;
+        letter-spacing: 2px;
+        line-height: 30px;
+    }
+
+    .txp{
+        font-size: 0.8em;
+        color: $black;
+        letter-spacing: 2px;
+        font-weight: normal !important;
+        
+    }
+
+
+    .highline{
+        background-color: #ffdc7b;
+        padding: 2px;
+        transition: all .6s ease-in-out;
+
+
+        &:hover{
+            transition: all .6s ease-in-out;
+            letter-spacing: 4px;
+        }
+    }
+
+
+
+
+
+.container{
+    
+    width: 900px;
+    height: 600px;
+    margin: 10%  auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    border-radius: 3px;
+    box-shadow: 4px 10px 20px rgba(55, 52, 73, .4);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+
+
+    & > .navbar, & > .section, & > .footer{
+        
+        box-sizing: border-box !important;
+        width: 100%;
+        min-height: 80px !important;
+        display: flex;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    & > .navbar{
+        width: 100%;
+        height: 20%;
+        min-height: 80px !important;
+
+        ul{ 
+            list-style: none;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            padding: 20px;
+
+            li{
+                display: inline;
+                margin: 10px;
+                padding: 10px;
+                color: $black;
+                border-radius: 25px;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                min-width: 150px;
+                @extend .txp;
+                font-size: 15px ;
+                transition: all .2s ease-in-out;
+
+                & ~ .active , &:hover{
+                    cursor: pointer;
+                    color: $white;
+                    background-color: $black;
+                    transition: all .3s ease-in-out;
+                }
+
+                & ~ .active:hover{
+                    color: $white;
+                    background-color: $color4; 
+                }
+            }
+
+
+          
+
+
+
+            
+        }
+
+    }
+
+    & > .section{
+      height: 60%; 
+      flex-direction: column;
+      align-items:  flex-start !important;
+      padding-left: 40px !important;
+
+     & >  .selection{
+          
+          display: flex;
+          flex-direction: row;
+
+          & > span{
+            width: 25px;
+            height: 25px;
+            background-color: #ccc;
+            margin: 5px;
+            border-radius: 100%;
+            border: solid  2px transparent;
+            transition: all .6s ease-in-out;
+
+            &:hover{
+                cursor: pointer;
+                border-color: $white;
+                transform: scale(1.5);
+                transition: all .6s ease-in-out;
+            }
+          }
+
+          & > #a{
+              background-color: $color2;
+          }
+
+
+          & > #b{
+            background-color: $color1;
+          }
+
+
+          & > #c{
+            background-color: $color3;
+        }
+
+
+        & > #d{
+          background-color: $color4;
+        }
+
+      }
+
+    }
+
+
+    & > .footer{
+        box-sizing: border-box !important;
+        height: 20%; 
+        width: calc(100%-80px) ;
+        padding: 10px;
+    }
+
+
+    
+
+
+
+
+
+
+}

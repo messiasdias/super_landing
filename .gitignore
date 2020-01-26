@@ -1,0 +1,6 @@
+.sass-cache/
+assets/css/*.map
+node_modules/
+composer.lock
+package-lock.json
+/dist/
