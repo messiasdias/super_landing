@@ -191,6 +191,17 @@ body{
       align-items:  flex-start !important;
       padding-left: 40px !important;
 
+
+      img{
+          border: solid 1px red;
+          position: absolute;
+          width: 450px;
+          height: 400px;
+          right: 10%;
+          top: 15%;
+          padding:0 !important;
+      }
+
      & >  .selection{
           
           display: flex;

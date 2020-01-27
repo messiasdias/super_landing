@@ -9,6 +9,8 @@
 
     <h1 class="title2">Find you Work</h1> 
 
+    <img :src="assets+image" />
+
     <div class="selection">
         <span id="a"  ></span>
         <span id="b"  ></span>
@@ -24,7 +26,12 @@
 
 export default {
     name : 'HomeSection',
-
+    data: function() {
+        return {
+            image: 'ima.png',
+            assets: 'assets/img/'
+        }
+    }
 }
 
 </script>
