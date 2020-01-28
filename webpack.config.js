@@ -33,13 +33,13 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: 'assets/img/[name].[ext]'
+          name: './assets/img/[name].[ext]'
         }
       },
       { test: /\.(png|woff|woff2|eot|ttf|svg)$/,
          loader: 'url-loader?limit=100000' ,
          options: {
-          name: './assets/public/vue/css/fonts/[name].[ext]'
+          name: './assets/css/fonts/[name].[ext]'
         }
       },
       {
