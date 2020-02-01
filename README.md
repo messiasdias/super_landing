@@ -1,5 +1,5 @@
 # Super Landing
-## UI Designe Inspiration
+## UI Design Inspiration
 Design by: 
 [Online web ustaad](https://www.youtube.com/watch?v=sC_x_c8jU8g)
 
